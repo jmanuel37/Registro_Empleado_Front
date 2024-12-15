@@ -1,0 +1,117 @@
+
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+<h2> Lista empeados</h2>
+<!--div class="lessons-table mat-elevation-z8">
+<table class="table table-striped" class="table table-striped">
+    <thead class="table-dark lessons-table mat-elevation-z8">
+        <tr>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Email</th>
+            <th>Mantenimiento</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let empleado of empleados">
+           <td>{{empleado.nombre}}</td>
+           <td>{{empleado.apellido}}</td>
+           <td>{{empleado.email}}</td>
+           <td>
+            iconi
+           < !-- button (click)= "actualizarEmpleado(empleado.id)" class="btn btn-info">Editar</button>
+           <button (click)= "eliminarEmpleado(empleado.id)" class="btn btn-danger" style="margin-left : 10px;">Eliminar</button>
+           <button (click)= "verDetallesDelEmpleado(empleado.id)" class="btn btn-primary" style="margin-left : 10px;">Detalle</button-->
+          <!--
+          </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+-->
+
+<!--mat-table [dataSource]="dataSource" matSort-->
+<!--div class="table-container search-bar" >
+  <mat-form-field>
+    <mat-label >Buscar</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Buscar Datos" >
+  </mat-form-field>
+</div-->
+
+<div class="table-container">
+<!--div class="resizable-table"-->
+  <div class="example-container mat-elevation-z8">
+  <!--div class = "row mt20"-->
+  <mat-form-field>
+    <mat-label >Buscar</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Buscar Datos                           " >
+  </mat-form-field>
+
+
+
+
+<mat-table #table class="isMobile table-striped " [dataSource]="dataSource" >
+
+
+  <ng-container matColumnDef="id" >
+    <mat-header-cell *matHeaderCellDef class="mat-column-width" >ID</mat-header-cell>
+    <mat-cell   *matCellDef="let lesson" class="mat-column-width mobile-label">{{lesson.id}}</mat-cell>
+</ng-container>
+
+
+<ng-container matColumnDef="nombre" >
+  <mat-header-cell *matHeaderCellDef>Nombre</mat-header-cell>
+  <mat-cell
+            *matCellDef="let lesson" class="mobile-label" >{{lesson.nombre}}</mat-cell>
+</ng-container>
+
+
+  <ng-container matColumnDef="apellido">
+    <mat-header-cell *matHeaderCellDef>Apellido</mat-header-cell>
+    <mat-cell
+              *matCellDef="let lesson" class="mobile-label" >{{lesson.apellido}}</mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="email">
+  <mat-header-cell *matHeaderCellDef>Email</mat-header-cell>
+  <mat-cell
+            *matCellDef="let lesson"  class="mobile-label" >{{lesson.email}}</mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="Mantenimiento" >
+  <mat-header-cell *matHeaderCellDef >Mantenimeinto</mat-header-cell>
+  <mat-cell class="tr far mobile-label2"
+  *matCellDef="let lesson">
+
+  <!--button type="button" (click)="verDetallesDelEmpleado(lesson.id)" class="btn btn-info">Detalle
+
+  </button-->
+  <span (click)="verDetallesDelEmpleado(lesson.id)" class="action-icon" style="margin-right: 5px;">
+    <mat-icon color="btn-info">playlist_add_check</mat-icon>
+  </span>
+  <!--button type="button" (click)="actualizarEmpleado(lesson.id)" class="btn btn-primary">Actualizar</button-->
+
+  <span (click)="actualizarEmpleado(lesson.id)" class="action-icon" style="margin-right: 5px;">
+    <mat-icon color="primary">edit</mat-icon>
+  </span>
+
+  <div *ngIf = "showAdminEmp">
+  <!--button type="button" (click)="eliminarEmpleado(lesson.id)" class="btn btn-danger">Eliminar</button-->
+  <span (click)="eliminarEmpleado(lesson.id)" class="action-icon" style="margin-right: 5px;">
+    <mat-icon color="warn">delete</mat-icon>
+  </span>
+</div>
+</mat-cell>
+</ng-container>
+
+
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"  class="th mat-header-cell"></mat-header-row>
+
+  <mat-row *matRowDef="let row; columns: displayedColumns"  class="tr"></mat-row>
+
+</mat-table>
+<mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" class="mat-paginator"></mat-paginator>
+</div>
+</div>
+<!--/div-->
+<!--/div-->

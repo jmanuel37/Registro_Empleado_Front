@@ -1,0 +1,115 @@
+
+
+.table23 {
+  width: 5% !important;
+  padding: 5px !important;
+}
+
+
+
+.table-container {
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 20px;
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse; /* Colapsar bordes */
+}
+
+.tableRep {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+
+.mat-header-cell {
+ /* background-color: #3f51b5 !important;/* Color de fondo del encabezado */
+  background-color: rgb(42, 116, 165);
+  color: black !important;             /* Color del texto del encabezado */
+  font-weight: bold !important;         /* Negrita para el texto del encabezado */
+ /* padding: 16px !important;             /* Espaciado interno del encabezado */
+}
+
+.mat-cell {
+ /* padding: 12px;             /* Espaciado interno de las celdas */
+  border-bottom: 1px solid #e0e0e0; /* Línea inferior */
+}
+
+.mat-row:hover {
+  background-color: #340d74; /* Color de fondo al pasar el mouse */
+}
+
+.mat-paginator {
+  margin-top: 20px;
+  background-color: rgb(42, 116, 165);
+  font-weight: bold !important;
+}
+
+.th:hover {
+  background-color: #ddd;
+  font-weight: bold;
+          }
+
+  .tr:hover {
+  font-weight: bold;
+  background-color: rgb(212, 197, 145)
+
+  }
+
+.header_fijo {
+    width: 100%;
+  }
+
+.mat-column-width {
+  /*width: 3% !important;*/
+  flex: 0 0 5%;
+}
+
+/* Tabla responsiva */
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+  max-height: 500px;
+  min-width: 300px;
+  overflow-x: auto
+}
+
+.mat-table {
+  overflow: auto;
+  max-height: 500px;
+}
+
+.mobile-label {
+ /* display: none;
+  width: 100%; margin-bottom: 20px;
+  */
+  font-weight: bold;
+}
+
+@media(max-width: 600px) {
+  .mobile-label {
+    width: 80px;
+    display: inline-block;
+        font-weight: bold;
+  }
+
+  .mat-header-row {
+    display: none;
+  }
+
+  .mat-row {
+    flex-direction: column;
+    align-items: start;
+    padding: 8px 24px;
+  }
+}
+
