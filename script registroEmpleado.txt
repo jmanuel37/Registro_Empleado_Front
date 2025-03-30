@@ -1,0 +1,183 @@
+1:40
+RegistroEmpleado_FrontEnd
+-- no crea app.module.ts
+ng new RegistroEmpleado_FrontEnd
+
+
+ng new RegistroEmpleado_FrontEnd --no-standalone --routing --ssr=false
+
+ng serve -o
+D:\Proyectos para subir\FrontEnd\RegistroEmpleado_FrontEnd>ng serve -o
+
+Install Angular Material
+ng add @angular/material
+
+
+// buscar app.module.ts
+ para ver todo lo importado
+
+API reference for Angular Material button
+import {MatButtonModule} from '@angular/material/button';
+
+--instalar boostrap
+npm install bootstrap-grid-only-css --save
+
+--agregarlo en proyecto
+en el archivo angular.json
+
+./node_modules/bootstrap-grid-only-css/dist/css/bootstrap-grid.min.css
+
+
+###
+ "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.css",
+              "./node_modules/bootstrap-grid-only-css/dist/css/bootstrap-grid.min.css"
+            ],
+
+
+--2:00hr
+--crear carpetas
+D:\Proyectos para subir\FrontEnd\RegistroEmpleado_FrontEnd\>cd src
+D:\Proyectos para subir\FrontEnd\RegistroEmpleado_FrontEnd\src>cd app
+
+D:\Proyectos para subir\FrontEnd\RegistroEmpleado_FrontEnd\src\app>mkdir pages
+
+D:\Proyectos para subir\FrontEnd\RegistroEmpleado_FrontEnd\src\app>mkdir components
+
+D:\Proyectos para subir\FrontEnd\RegistroEmpleado_FrontEnd\src\app>cd components
+--crear un componente
+ng g c 
+D:\Proyectos para subir\FrontEnd\RegistroEmpleado_FrontEnd\src\app\components>ng g c navbar
+hay que crear una pagina
+D:\Proyectos para subir\FrontEnd\RegistroEmpleado_FrontEnd\src\app\components>cd  ..
+
+D:\Proyectos para subir\FrontEnd\RegistroEmpleado_FrontEnd\src\app>cd pages
+
+D:\Proyectos para subir\FrontEnd\RegistroEmpleado_FrontEnd\src\app\pages>ng g c signup
+---D:\Proyectos para subir\FrontEnd\RegistroEmpleado_FrontEnd\src\app\pages>ng g c login
+D:\Proyectos para subir\FrontEnd\RegistroEmpleado_FrontEnd\src\app\pages>cd ..
+//bajar la imagen
+https://www.flation.com
+https://www.freepik.es
+2:10
+//imágenes angular 18
+Debes poner el archivo multimedia en el directorio "public" y llamarlo, no crees otro directorio dentro del directorio "public", me funciona en Angular 18.
+
+<img src="/logo_login.jpg">
+
+Mi archivo "angular.json"
+
+ "assets": [
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
+
+2:28
+D:\Proyectos para subir\FrontEnd\RegistroEmpleado_FrontEnd\src\app>mkdir services  
+D:\Proyectos para subir\FrontEnd\RegistroEmpleado_FrontEnd\src\app>cd services
+
+--servicio
+ng g s 
+D:\Proyectos para subir\FrontEnd\RegistroEmpleado_FrontEnd\src\app\services>ng g s user
+
+2:53
+--instalar 
+MatSnackBarModule angular material
+--para mostrar ventanas
+--colocarlo en app.module.ts
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
+tambien esta otra ventana par mensajes Con ventana grande
+npm install sweetalert2
+D:\Proyectos para subir\FrontEnd\RegistroEmpleado_FrontEnd>npm install sweetalert2
+
+3:14
+--trabajando con la seguridad
+ng g c login
+D:\Proyectos para subir\FrontEnd\RegistroEmpleado_FrontEnd\src\app\pages>ng g c login
+
+ng g c home
+
+
+
+
+3:51
+explica código jwt en backend
+
+5:12 comiensa trabajar token en angular
+
+--creando otro servicio
+D:\Proyectos para subir\FrontEnd\RegistroEmpleado_FrontEnd\src\app\services>ng g s login
+
+6:08
+en pages crear directorios
+mkdir admin
+mkdir user
+
+D:\Proyectos para subir\FrontEnd\RegistroEmpleado_FrontEnd\src\app\pages>mkdir admin
+
+D:\Proyectos para subir\FrontEnd\RegistroEmpleado_FrontEnd\src\app\pages>mkdir user
+
+D:\Proyectos para subir\FrontEnd\RegistroEmpleado_FrontEnd\src\app\pages>
+en admin
+ng  g c Dashboard
+
+D:\Proyectos para subir\FrontEnd\RegistroEmpleado_FrontEnd\src\app\pages\admin>ng  g c Dashboard
+en user
+ng g c user-dashboard
+D:\Proyectos para subir\FrontEnd\RegistroEmpleado_FrontEnd\src\app\pages\user>ng g c user-dashboard
+
+6:25
+
+guard ejecutan antes de cargan una ruta rutas
+
+en sevices crear los guard
+
+ng g guard admin
+ng g guard normal
+
+tipo 
+CanActivate   ---> Antes de cargar los componentes de las rutas
+
+6:55
+
+en pages crear directorios
+mkdir admin
+mkdir user
+
+
+--front controlar Empleado
+mkdir modelo
+min 29
+
+D:\Proyectos para subir\FrontEnd\RegistroEmpleado_FrontEnd\src\app>mkdir modelo
+ng g class empleado
+D:\Proyectos para subir\FrontEnd\RegistroEmpleado_FrontEnd\src\app\modelo>ng g class empleado
+
+D:\Proyectos para subir\FrontEnd\RegistroEmpleado_FrontEnd\src\app\components>ng g c lista-empleados
+
+D:\Proyectos para subir\FrontEnd\RegistroEmpleado_FrontEnd\src\app\services>
+mkdir empleado
+ng g s empleado
+
+D:\Proyectos para subir\FrontEnd\RegistroEmpleado_FrontEnd\src\app\services\empleado>ng g s empleado
+
+min  51
+56
+
+
+responsive
+https://stackoverflow.com/questions/43200545/create-a-responsive-toolbar-using-angular-material
+https://stackblitz.com/edit/mat-responsive-toolbar?file=src%2Fapp%2Fapp.component.css,src%2Fstyles.css
+
+
+npm install --save sweetalert2
+
+
+crear componente
+ng g c registrar-empleado
+crea componente
+ng g c actualizar-empleado
+ng g c empleado-detalle
